@@ -141,9 +141,8 @@ while True:
                 boxes.append([x, y, int(width), int(height)])
                 confidences.append(float(confidence))
                 classIDs.append(classID)
-    count=count +1
     resultsForJSON.append(
-        {"ObjectID": count ,"label": classID, "confidence": float('%.2f' % confidence), "topleft": {"x": int(x), "y": int(y)},
+        {"label": classID, "confidence": float('%.2f' % confidence), "topleft": {"x": int(x), "y": int(y)},
          "bottomright": {"x": int(width), "y": height}})
     print("Working...")
 
